@@ -6,6 +6,7 @@ import java.util.TreeMap;
 
 /**
  * Created by dev on 17/02/2016.
+  Modificado por dev em 23/03/2019
  */
 public class Basket {
     private final String name;
@@ -45,6 +46,10 @@ public class Basket {
     public void clearBasket() {
         this.list.clear();
     }
+    
+    public void clearBasket2() {
+        this.list.clear();
+    }
 
     public Map<StockItem, Integer> Items() {
         return Collections.unmodifiableMap(list);
@@ -58,6 +63,6 @@ public class Basket {
             s = s + item.getKey() + ". " + item.getValue() + " purchased\n";
             totalCost += item.getKey().getPrice() * item.getValue();
         }
-        return s + "Total cost " + totalCost;
+        return s + "Custo Total " + totalCost;
     }
 }
